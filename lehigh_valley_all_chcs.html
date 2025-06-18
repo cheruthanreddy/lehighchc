@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d034735b2b858329dab6f4abcb4d9c44 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d034735b2b858329dab6f4abcb4d9c44" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d034735b2b858329dab6f4abcb4d9c44 = L.map(
+                "map_d034735b2b858329dab6f4abcb4d9c44",
+                {
+                    center: [40.75, -75.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3547e9a094f4e6c2ef72c17e027d644e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3547e9a094f4e6c2ef72c17e027d644e.addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+        function geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "salmon", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8 = L.geoJson(null, {
+                onEachFeature: geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_onEachFeature,
+            
+                style: geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_styler,
+            ...{
+}
+        });
+
+        function geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_add (data) {
+            geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8
+                .addData(data);
+        }
+            geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8_add({"features": [{"geometry": {"coordinates": [[[-74.980674, 41.078178], [-74.968389, 41.087797], [-74.966759, 41.093425], [-74.967389, 41.094049], [-74.966349, 41.094003], [-74.78921, 40.931298], [-74.767874, 40.911823], [-74.889753, 40.787832], [-74.968454, 40.710791], [-75.190858, 40.591342], [-75.196803, 40.60858], [-75.200708, 40.618356], [-75.20392, 40.691498], [-75.196533, 40.751631], [-75.171587, 40.777745], [-75.16365, 40.778386], [-75.149378, 40.774786], [-75.1344, 40.773765], [-75.108505, 40.791094], [-75.053294, 40.8599], [-75.051029, 40.865662], [-75.052538, 40.872051], [-75.117764, 40.953023], [-75.119893, 40.961646], [-75.120316, 40.96263], [-75.120435, 40.968302], [-75.120564, 40.968313], [-75.131364, 40.969277], [-75.135526, 40.973807], [-75.130575, 40.991093], [-75.109114, 41.004102], [-75.091377, 41.012283], [-75.069277, 41.019348], [-75.051794, 41.027142], [-75.036982, 41.034702], [-75.026003, 41.042687], [-74.980674, 41.078178]]], "type": "Polygon"}, "id": "34041", "properties": {"CENSUSAREA": 356.918, "COUNTY": "041", "GEO_ID": "0500000US34041", "LSAD": "County", "NAME": "Warren", "STATE": "34"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_4f3c59a8bce8884fe0cd8c9190c9e7a8.addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var marker_c519742f9425e199b4d8e914ca34ed1a = L.marker(
+                [40.85180326025225, -75.00166659477313],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var div_icon_38ae61b9052a92409e3b7d61a92be943 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eWarren\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_c519742f9425e199b4d8e914ca34ed1a.setIcon(div_icon_38ae61b9052a92409e3b7d61a92be943);
+            
+    
+        function geo_json_ab58f9930541762fd1b74fd8ba2bfec8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_ab58f9930541762fd1b74fd8ba2bfec8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ab58f9930541762fd1b74fd8ba2bfec8 = L.geoJson(null, {
+                onEachFeature: geo_json_ab58f9930541762fd1b74fd8ba2bfec8_onEachFeature,
+            
+                style: geo_json_ab58f9930541762fd1b74fd8ba2bfec8_styler,
+            ...{
+}
+        });
+
+        function geo_json_ab58f9930541762fd1b74fd8ba2bfec8_add (data) {
+            geo_json_ab58f9930541762fd1b74fd8ba2bfec8
+                .addData(data);
+        }
+            geo_json_ab58f9930541762fd1b74fd8ba2bfec8_add({"features": [{"geometry": {"coordinates": [[[-75.474193, 40.814746], [-75.300594, 40.859563], [-75.120564, 40.968313], [-75.120435, 40.968302], [-75.120316, 40.96263], [-75.119893, 40.961646], [-75.117764, 40.953023], [-75.052538, 40.872051], [-75.051029, 40.865662], [-75.053294, 40.8599], [-75.108505, 40.791094], [-75.1344, 40.773765], [-75.149378, 40.774786], [-75.16365, 40.778386], [-75.171587, 40.777745], [-75.196533, 40.751631], [-75.20392, 40.691498], [-75.200708, 40.618356], [-75.196803, 40.60858], [-75.333514, 40.537057], [-75.404412, 40.581154], [-75.430404, 40.674152], [-75.481469, 40.655744], [-75.608985, 40.787387], [-75.474193, 40.814746]]], "type": "Polygon"}, "id": "42095", "properties": {"CENSUSAREA": 369.671, "COUNTY": "095", "GEO_ID": "0500000US42095", "LSAD": "County", "NAME": "Northampton", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_ab58f9930541762fd1b74fd8ba2bfec8.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_ab58f9930541762fd1b74fd8ba2bfec8.addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var marker_c7f6238434b2b906a34ef0ccd04cbe77 = L.marker(
+                [40.75136136208792, -75.30798328398438],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var div_icon_b8444b83cc6aa90c92425ac08c2ad360 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eNorthampton\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_c7f6238434b2b906a34ef0ccd04cbe77.setIcon(div_icon_b8444b83cc6aa90c92425ac08c2ad360);
+            
+    
+        function geo_json_3acdabd35a06e6136d19d5dcae28f7c8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_3acdabd35a06e6136d19d5dcae28f7c8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3acdabd35a06e6136d19d5dcae28f7c8 = L.geoJson(null, {
+                onEachFeature: geo_json_3acdabd35a06e6136d19d5dcae28f7c8_onEachFeature,
+            
+                style: geo_json_3acdabd35a06e6136d19d5dcae28f7c8_styler,
+            ...{
+}
+        });
+
+        function geo_json_3acdabd35a06e6136d19d5dcae28f7c8_add (data) {
+            geo_json_3acdabd35a06e6136d19d5dcae28f7c8
+                .addData(data);
+        }
+            geo_json_3acdabd35a06e6136d19d5dcae28f7c8_add({"features": [{"geometry": {"coordinates": [[[-75.997348, 40.912985], [-75.73193, 41.00822], [-75.77196, 41.076751], [-75.649637, 41.122344], [-75.49599, 40.987181], [-75.57459, 40.951323], [-75.474193, 40.814746], [-75.608985, 40.787387], [-75.757807, 40.735414], [-75.997348, 40.912985]]], "type": "Polygon"}, "id": "42025", "properties": {"CENSUSAREA": 381.46, "COUNTY": "025", "GEO_ID": "0500000US42025", "LSAD": "County", "NAME": "Carbon", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_3acdabd35a06e6136d19d5dcae28f7c8.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_3acdabd35a06e6136d19d5dcae28f7c8.addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var marker_3289c9c46530c38641d10835ef119169 = L.marker(
+                [40.913167386901314, -75.70597315610999],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var div_icon_8630122cefb7106c5016dfbee74e2940 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eCarbon\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_3289c9c46530c38641d10835ef119169.setIcon(div_icon_8630122cefb7106c5016dfbee74e2940);
+            
+    
+        function geo_json_5b1d00487977411ef7cf9e4b420231ee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "lightblue", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_5b1d00487977411ef7cf9e4b420231ee_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5b1d00487977411ef7cf9e4b420231ee = L.geoJson(null, {
+                onEachFeature: geo_json_5b1d00487977411ef7cf9e4b420231ee_onEachFeature,
+            
+                style: geo_json_5b1d00487977411ef7cf9e4b420231ee_styler,
+            ...{
+}
+        });
+
+        function geo_json_5b1d00487977411ef7cf9e4b420231ee_add (data) {
+            geo_json_5b1d00487977411ef7cf9e4b420231ee
+                .addData(data);
+        }
+            geo_json_5b1d00487977411ef7cf9e4b420231ee_add({"features": [{"geometry": {"coordinates": [[[-75.694308, 40.551149], [-75.738038, 40.579105], [-75.739442, 40.57994], [-75.76674, 40.597033], [-75.891473, 40.67727], [-75.757807, 40.735414], [-75.608985, 40.787387], [-75.481469, 40.655744], [-75.430404, 40.674152], [-75.404412, 40.581154], [-75.333514, 40.537057], [-75.338633, 40.534068], [-75.36661, 40.515424], [-75.367911, 40.514601], [-75.409733, 40.487984], [-75.484057, 40.418451], [-75.529694, 40.446995], [-75.682238, 40.543638], [-75.694308, 40.551149]]], "type": "Polygon"}, "id": "42077", "properties": {"CENSUSAREA": 345.166, "COUNTY": "077", "GEO_ID": "0500000US42077", "LSAD": "County", "NAME": "Lehigh", "STATE": "42"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_5b1d00487977411ef7cf9e4b420231ee.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["NAME"];
+    let aliases = ["County:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_5b1d00487977411ef7cf9e4b420231ee.addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var marker_ae8b3b38b2310760242dca33ec0d21f0 = L.marker(
+                [40.61212978300357, -75.59564593854462],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var div_icon_d996ea2baac5901dc535e60148e47532 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:12px; font-weight:bold; color:white; text-shadow:1px 1px 2px black;\"\u003eLehigh\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_ae8b3b38b2310760242dca33ec0d21f0.setIcon(div_icon_d996ea2baac5901dc535e60148e47532);
+            
+    
+            var marker_eaa7ebe5916d1286b025c94b27b022b4 = L.marker(
+                [40.6044, -75.4729],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_283ec8f596457d6ab6dfaa4a5e29588f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41247f232e0432fcfc97be6f9e1be462 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29a37aa9d2d0044268046e42d86983c1 = $(`<div id="html_29a37aa9d2d0044268046e42d86983c1" style="width: 100.0%; height: 100.0%;"><b>Allentown – Hamilton Street</b></div>`)[0];
+                popup_41247f232e0432fcfc97be6f9e1be462.setContent(html_29a37aa9d2d0044268046e42d86983c1);
+            
+        
+
+        marker_eaa7ebe5916d1286b025c94b27b022b4.bindPopup(popup_41247f232e0432fcfc97be6f9e1be462)
+        ;
+
+        
+    
+    
+                marker_eaa7ebe5916d1286b025c94b27b022b4.setIcon(icon_283ec8f596457d6ab6dfaa4a5e29588f);
+            
+    
+            var marker_988a68a227df3d8f262c0e4bd5996549 = L.marker(
+                [40.6107, -75.4698],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_160fa18a7aa4f4cd9dad5fac47e28f87 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d1e5cbfa0411fe7247e8f7d4f45c508 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_906e2487516a05c2528c7a5554945690 = $(`<div id="html_906e2487516a05c2528c7a5554945690" style="width: 100.0%; height: 100.0%;"><b>Allentown – Vida Nueva at Casa</b></div>`)[0];
+                popup_7d1e5cbfa0411fe7247e8f7d4f45c508.setContent(html_906e2487516a05c2528c7a5554945690);
+            
+        
+
+        marker_988a68a227df3d8f262c0e4bd5996549.bindPopup(popup_7d1e5cbfa0411fe7247e8f7d4f45c508)
+        ;
+
+        
+    
+    
+                marker_988a68a227df3d8f262c0e4bd5996549.setIcon(icon_160fa18a7aa4f4cd9dad5fac47e28f87);
+            
+    
+            var marker_f368ceabfc0c3a121400df9240a19f7c = L.marker(
+                [40.6032, -75.4764],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_bdff52387dd59defeb0c277c7c99eaee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1452e11439bce26ae886cd173cca062d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e27350d5eb241536b0f294902bfd18a = $(`<div id="html_0e27350d5eb241536b0f294902bfd18a" style="width: 100.0%; height: 100.0%;"><b>Dental Sigal – Allentown</b></div>`)[0];
+                popup_1452e11439bce26ae886cd173cca062d.setContent(html_0e27350d5eb241536b0f294902bfd18a);
+            
+        
+
+        marker_f368ceabfc0c3a121400df9240a19f7c.bindPopup(popup_1452e11439bce26ae886cd173cca062d)
+        ;
+
+        
+    
+    
+                marker_f368ceabfc0c3a121400df9240a19f7c.setIcon(icon_bdff52387dd59defeb0c277c7c99eaee);
+            
+    
+            var marker_f999521261c53fc843a95c33cc58a4fe = L.marker(
+                [40.6079, -75.5021],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_ae9e3b57a82f5dc86da8839fface4dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2eea5865cecb001ab5bf49fc33607195 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1582d1204eef462c4fae8c0ea1a76641 = $(`<div id="html_1582d1204eef462c4fae8c0ea1a76641" style="width: 100.0%; height: 100.0%;"><b>Family Health Center – 17th St</b></div>`)[0];
+                popup_2eea5865cecb001ab5bf49fc33607195.setContent(html_1582d1204eef462c4fae8c0ea1a76641);
+            
+        
+
+        marker_f999521261c53fc843a95c33cc58a4fe.bindPopup(popup_2eea5865cecb001ab5bf49fc33607195)
+        ;
+
+        
+    
+    
+                marker_f999521261c53fc843a95c33cc58a4fe.setIcon(icon_ae9e3b57a82f5dc86da8839fface4dfa);
+            
+    
+            var marker_0d481800df396db171a190fb10b42749 = L.marker(
+                [40.6048, -75.4705],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_bcd732c2dc440d427e0d7c54cd53eab6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f430c8bfe66fb31a6a7fb5e5f75b0b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4676ef4b52754b9681e1fbfac0dd836 = $(`<div id="html_b4676ef4b52754b9681e1fbfac0dd836" style="width: 100.0%; height: 100.0%;"><b>Family Health Center – 6th St</b></div>`)[0];
+                popup_2f430c8bfe66fb31a6a7fb5e5f75b0b6.setContent(html_b4676ef4b52754b9681e1fbfac0dd836);
+            
+        
+
+        marker_0d481800df396db171a190fb10b42749.bindPopup(popup_2f430c8bfe66fb31a6a7fb5e5f75b0b6)
+        ;
+
+        
+    
+    
+                marker_0d481800df396db171a190fb10b42749.setIcon(icon_bcd732c2dc440d427e0d7c54cd53eab6);
+            
+    
+            var marker_18c4e830525c0589216a75839c7b13af = L.marker(
+                [40.6276, -75.3729],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_4524ec9fa06fd8ab3d32bc60ae138af5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf52384d0e9d9bfd801213b102740a67 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b503b5c775f599da6062f332a712e87 = $(`<div id="html_8b503b5c775f599da6062f332a712e87" style="width: 100.0%; height: 100.0%;"><b>Bethlehem – Broad Street</b></div>`)[0];
+                popup_bf52384d0e9d9bfd801213b102740a67.setContent(html_8b503b5c775f599da6062f332a712e87);
+            
+        
+
+        marker_18c4e830525c0589216a75839c7b13af.bindPopup(popup_bf52384d0e9d9bfd801213b102740a67)
+        ;
+
+        
+    
+    
+                marker_18c4e830525c0589216a75839c7b13af.setIcon(icon_4524ec9fa06fd8ab3d32bc60ae138af5);
+            
+    
+            var marker_63c6d7ac8a5ec10c4a0ed6121d75d220 = L.marker(
+                [40.6108, -75.3744],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_b6d0630362b54de2d654d0fbf0cdb9dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2cf543247bd88eec78b2a945d0f8e414 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc8ed972e57ea3df5d9c962038cba409 = $(`<div id="html_dc8ed972e57ea3df5d9c962038cba409" style="width: 100.0%; height: 100.0%;"><b>Bethlehem – Southside</b></div>`)[0];
+                popup_2cf543247bd88eec78b2a945d0f8e414.setContent(html_dc8ed972e57ea3df5d9c962038cba409);
+            
+        
+
+        marker_63c6d7ac8a5ec10c4a0ed6121d75d220.bindPopup(popup_2cf543247bd88eec78b2a945d0f8e414)
+        ;
+
+        
+    
+    
+                marker_63c6d7ac8a5ec10c4a0ed6121d75d220.setIcon(icon_b6d0630362b54de2d654d0fbf0cdb9dd);
+            
+    
+            var marker_110a5074a7e3c7b86f6a18b9c4e08656 = L.marker(
+                [40.6107, -75.3745],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_9163b78b65d9226afcda77a242b829ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_278a3130e7e719f0274ab137e03e2e1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ed51b4d5bd2f161a1dc3a9695f62ce3 = $(`<div id="html_7ed51b4d5bd2f161a1dc3a9695f62ce3" style="width: 100.0%; height: 100.0%;"><b>Dental – Bethlehem</b></div>`)[0];
+                popup_278a3130e7e719f0274ab137e03e2e1a.setContent(html_7ed51b4d5bd2f161a1dc3a9695f62ce3);
+            
+        
+
+        marker_110a5074a7e3c7b86f6a18b9c4e08656.bindPopup(popup_278a3130e7e719f0274ab137e03e2e1a)
+        ;
+
+        
+    
+    
+                marker_110a5074a7e3c7b86f6a18b9c4e08656.setIcon(icon_9163b78b65d9226afcda77a242b829ac);
+            
+    
+            var marker_0883422df4e8133ca780174f4e1122aa = L.marker(
+                [40.6521, -75.3491],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_79019b3e3803c4c02f807776e689381c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99c67d1cd5c4ed9523ddc7c1d105a15c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb00b302e53ecf7a86a2a92a0a01a810 = $(`<div id="html_fb00b302e53ecf7a86a2a92a0a01a810" style="width: 100.0%; height: 100.0%;"><b>Family Medicine – Bethlehem</b></div>`)[0];
+                popup_99c67d1cd5c4ed9523ddc7c1d105a15c.setContent(html_fb00b302e53ecf7a86a2a92a0a01a810);
+            
+        
+
+        marker_0883422df4e8133ca780174f4e1122aa.bindPopup(popup_99c67d1cd5c4ed9523ddc7c1d105a15c)
+        ;
+
+        
+    
+    
+                marker_0883422df4e8133ca780174f4e1122aa.setIcon(icon_79019b3e3803c4c02f807776e689381c);
+            
+    
+            var marker_8ef948a5df98ef7bc93f61dd73c0981b = L.marker(
+                [40.6262, -75.4003],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_4406abe630bf5b59f8d434dcd46212ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd0a8274d61b10db9661cb516e189dc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4db974904e5719dd0c8a997a6a7687e7 = $(`<div id="html_4db974904e5719dd0c8a997a6a7687e7" style="width: 100.0%; height: 100.0%;"><b>OB/GYN – Bethlehem</b></div>`)[0];
+                popup_bd0a8274d61b10db9661cb516e189dc2.setContent(html_4db974904e5719dd0c8a997a6a7687e7);
+            
+        
+
+        marker_8ef948a5df98ef7bc93f61dd73c0981b.bindPopup(popup_bd0a8274d61b10db9661cb516e189dc2)
+        ;
+
+        
+    
+    
+                marker_8ef948a5df98ef7bc93f61dd73c0981b.setIcon(icon_4406abe630bf5b59f8d434dcd46212ca);
+            
+    
+            var marker_c3ca51a09c341b851922c202e81ace9f = L.marker(
+                [40.6885, -75.2235],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_7d37516c05930d5f769dfa1de79b677e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0a3fa264e88801607be6c16bd380060 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6130fa02422eafc05bea1537e81c843f = $(`<div id="html_6130fa02422eafc05bea1537e81c843f" style="width: 100.0%; height: 100.0%;"><b>Easton Health Center</b></div>`)[0];
+                popup_f0a3fa264e88801607be6c16bd380060.setContent(html_6130fa02422eafc05bea1537e81c843f);
+            
+        
+
+        marker_c3ca51a09c341b851922c202e81ace9f.bindPopup(popup_f0a3fa264e88801607be6c16bd380060)
+        ;
+
+        
+    
+    
+                marker_c3ca51a09c341b851922c202e81ace9f.setIcon(icon_7d37516c05930d5f769dfa1de79b677e);
+            
+    
+            var marker_bccd7458bef14e556345d006b254438f = L.marker(
+                [40.6911, -75.2109],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_e031e12ba58d2ea313580eb2b003ea19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86a6bfa837c94b9a0f4e44248d59690f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e023d91d34c885b2519f51a5f8929ef = $(`<div id="html_7e023d91d34c885b2519f51a5f8929ef" style="width: 100.0%; height: 100.0%;"><b>Dental – Easton</b></div>`)[0];
+                popup_86a6bfa837c94b9a0f4e44248d59690f.setContent(html_7e023d91d34c885b2519f51a5f8929ef);
+            
+        
+
+        marker_bccd7458bef14e556345d006b254438f.bindPopup(popup_86a6bfa837c94b9a0f4e44248d59690f)
+        ;
+
+        
+    
+    
+                marker_bccd7458bef14e556345d006b254438f.setIcon(icon_e031e12ba58d2ea313580eb2b003ea19);
+            
+    
+            var marker_00d1c98092726d9734fefa8abf51bbbb = L.marker(
+                [40.6907, -75.2105],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_9d917208335417845cc0fa26a7e084db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0934fc6db49e09661ae1401bbd8d538 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b70ccdc8fcad51014ffa5877bb93d42 = $(`<div id="html_9b70ccdc8fcad51014ffa5877bb93d42" style="width: 100.0%; height: 100.0%;"><b>OB/GYN & KidsCare – Easton</b></div>`)[0];
+                popup_a0934fc6db49e09661ae1401bbd8d538.setContent(html_9b70ccdc8fcad51014ffa5877bb93d42);
+            
+        
+
+        marker_00d1c98092726d9734fefa8abf51bbbb.bindPopup(popup_a0934fc6db49e09661ae1401bbd8d538)
+        ;
+
+        
+    
+    
+                marker_00d1c98092726d9734fefa8abf51bbbb.setIcon(icon_9d917208335417845cc0fa26a7e084db);
+            
+    
+            var marker_39b913908cb58474b25202826b73315f = L.marker(
+                [40.6802, -75.226],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_b0635e5ad8d6bc4698a8d828f59259a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ae9779011ceb348597ab51b9e20b36d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40bde6e2497bbb22b22c0c89290c47af = $(`<div id="html_40bde6e2497bbb22b22c0c89290c47af" style="width: 100.0%; height: 100.0%;"><b>Family Health Center – South Side</b></div>`)[0];
+                popup_0ae9779011ceb348597ab51b9e20b36d.setContent(html_40bde6e2497bbb22b22c0c89290c47af);
+            
+        
+
+        marker_39b913908cb58474b25202826b73315f.bindPopup(popup_0ae9779011ceb348597ab51b9e20b36d)
+        ;
+
+        
+    
+    
+                marker_39b913908cb58474b25202826b73315f.setIcon(icon_b0635e5ad8d6bc4698a8d828f59259a4);
+            
+    
+            var marker_ce46c319bdfe9ebc0996653e16a65dc0 = L.marker(
+                [40.8756, -75.7119],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_023a812582237015706b0db93ba30726 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23f3fe3b8dbfc9e0a66caae27d3e97aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1947caf21568000a8dfc2ad65dceaddc = $(`<div id="html_1947caf21568000a8dfc2ad65dceaddc" style="width: 100.0%; height: 100.0%;"><b>Carbon County State Health Center</b></div>`)[0];
+                popup_23f3fe3b8dbfc9e0a66caae27d3e97aa.setContent(html_1947caf21568000a8dfc2ad65dceaddc);
+            
+        
+
+        marker_ce46c319bdfe9ebc0996653e16a65dc0.bindPopup(popup_23f3fe3b8dbfc9e0a66caae27d3e97aa)
+        ;
+
+        
+    
+    
+                marker_ce46c319bdfe9ebc0996653e16a65dc0.setIcon(icon_023a812582237015706b0db93ba30726);
+            
+    
+            var marker_c60705294a239a56ed4cde4434e1c92a = L.marker(
+                [40.8259, -75.7137],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_d755c8afbd047dd8c849bd392c379f27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a862a7eaf4cf73105e7f67fee2c38e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f743b47c9cf61e32728f49953c754da1 = $(`<div id="html_f743b47c9cf61e32728f49953c754da1" style="width: 100.0%; height: 100.0%;"><b>Carbon-Monroe-Pike MH/DS – Carbon Office</b></div>`)[0];
+                popup_9a862a7eaf4cf73105e7f67fee2c38e0.setContent(html_f743b47c9cf61e32728f49953c754da1);
+            
+        
+
+        marker_c60705294a239a56ed4cde4434e1c92a.bindPopup(popup_9a862a7eaf4cf73105e7f67fee2c38e0)
+        ;
+
+        
+    
+    
+                marker_c60705294a239a56ed4cde4434e1c92a.setIcon(icon_d755c8afbd047dd8c849bd392c379f27);
+            
+    
+            var marker_3d40bb8efa259c063682bb4073536e17 = L.marker(
+                [40.8321, -75.7111],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_8ceb7870ae9a8f9aac999213ebc7ddba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea896b7cce8112bf08a3aff9e762f811 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_350b6e39b73f492ad97cb8a6d894620c = $(`<div id="html_350b6e39b73f492ad97cb8a6d894620c" style="width: 100.0%; height: 100.0%;"><b>St. Luke's Lehighton Campus</b></div>`)[0];
+                popup_ea896b7cce8112bf08a3aff9e762f811.setContent(html_350b6e39b73f492ad97cb8a6d894620c);
+            
+        
+
+        marker_3d40bb8efa259c063682bb4073536e17.bindPopup(popup_ea896b7cce8112bf08a3aff9e762f811)
+        ;
+
+        
+    
+    
+                marker_3d40bb8efa259c063682bb4073536e17.setIcon(icon_8ceb7870ae9a8f9aac999213ebc7ddba);
+            
+    
+            var marker_0c603ac0f4246ed6731ca9205c5a18b8 = L.marker(
+                [40.8193, -75.7194],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_c110f5af861c8e3c3afc868bf0685e60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c841877d50d5970bd73de5b0f94610a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7540090d79ae763459ef4b016ad4b28d = $(`<div id="html_7540090d79ae763459ef4b016ad4b28d" style="width: 100.0%; height: 100.0%;"><b>Lehighton Area Family Medicine</b></div>`)[0];
+                popup_3c841877d50d5970bd73de5b0f94610a.setContent(html_7540090d79ae763459ef4b016ad4b28d);
+            
+        
+
+        marker_0c603ac0f4246ed6731ca9205c5a18b8.bindPopup(popup_3c841877d50d5970bd73de5b0f94610a)
+        ;
+
+        
+    
+    
+                marker_0c603ac0f4246ed6731ca9205c5a18b8.setIcon(icon_c110f5af861c8e3c3afc868bf0685e60);
+            
+    
+            var marker_ae0c24792de846b1a183648931793250 = L.marker(
+                [40.8485, -74.8314],
+                {
+}
+            ).addTo(map_d034735b2b858329dab6f4abcb4d9c44);
+        
+    
+            var icon_1632f0effda7c0615dade091d5e1b01b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_865364ddac00ddf13eff28f2f482a3f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4309cf562e81a94931fd332782af1305 = $(`<div id="html_4309cf562e81a94931fd332782af1305" style="width: 100.0%; height: 100.0%;"><b>Zufall Health Center – Hackettstown</b></div>`)[0];
+                popup_865364ddac00ddf13eff28f2f482a3f0.setContent(html_4309cf562e81a94931fd332782af1305);
+            
+        
+
+        marker_ae0c24792de846b1a183648931793250.bindPopup(popup_865364ddac00ddf13eff28f2f482a3f0)
+        ;
+
+        
+    
+    
+                marker_ae0c24792de846b1a183648931793250.setIcon(icon_1632f0effda7c0615dade091d5e1b01b);
+            
+</script>
+</html>
